@@ -111,3 +111,36 @@ const lynn: Player1<null> = {
 
 type A = Array<number>;
 let a7: A = [1, 2, 3, 4];
+
+//---------------------------------------------------
+
+//챌린지
+type LastReturn = { <T>(arr: T[]): T };
+const last: LastReturn = (arr) => arr[arr.length - 1];
+
+// Prepend
+type Prepend = { <T>(arr: T[], item: T): T[] };
+const prepend: Prepend = (arr, item) => {
+  let newarr = [item, ...arr];
+  return newarr;
+};
+
+//  Mix
+type Mix = { <T>(arr: T[], arr2: T[]): T[] };
+const mix: Mix = (firstArr, secondArr) => [...firstArr, ...secondArr];
+
+// Count
+type Count = { <T>(arr: T[]): number };
+const count: Count = (arr) => arr.length;
+
+// FindIndex
+type FindIndex = { <T, E>(arr: T[], item: T): number | null };
+const findIndexReturn: FindIndex = (arr, item) => {
+  const index = arr.indexOf(item);
+  return index !== -1 ? index : null;
+};
+
+// Slice
+type Slice = { <T>(arr: T[], startIndex: number, endIndex?: number): T[] };
+const slice: Slice = (arr, startIndex, endIndex) =>
+  arr.slice(startIndex, endIndex);
