@@ -1,0 +1,17 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "ES6",
+    "lib": ["ES6", "DOM"],
+    "strict": true
+  }
+}
+
+//어디에 타입스크립트가 있는지
+//include : src 아래의 모든 파일을 타입스크립트가 확인
+//compilerOptions
+//outDir : 자바스크립트 파일이 생성될 디렉터리를 지정
+//target: 컴파일될 JS버전을 정해줄 수 있음
+//lib : 런타임 환경을 알려줌, 타입스크립트에게 어떤 API를 사용하고 어떤 환경에서 코드를 실행하는 지를 지정.
+//strict : 모든 엄격한 타입 검사 옵션을 활성화
