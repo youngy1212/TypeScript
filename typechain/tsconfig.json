@@ -3,9 +3,10 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "ES6",
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES6"],
     "strict": true,
-    "allowJs": true
+    "esModuleInterop": true,
+    "module": "CommonJS"
   }
 }
 
@@ -16,5 +17,11 @@
 //target: 컴파일될 JS버전을 정해줄 수 있음
 //lib : 런타임 환경을 알려줌, 타입스크립트에게 어떤 API를 사용하고 어떤 환경에서 코드를 실행하는 지를 지정.
 //strict : 모든 엄격한 타입 검사 옵션을 활성화
+
 //lib -> 통합된 라이브러리의 기본타입정의
+//ex :    "lib": ["ES6", "dom"],
 //allowJs 타입스크립트 안에 JS를 허용한다
+//"allowJs": true
+
+//esModuleInterop : CommonJS 모듈을 ES6 모듈 코드베이스로 가져오려고 할 때 발행하는 문제를 해결.
+//ES6 모듈 사양을 준수하여 CommonJS 모듈을 정상적으로 가져올 수 있게 해줌
